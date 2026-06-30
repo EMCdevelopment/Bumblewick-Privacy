@@ -1,0 +1,111 @@
+<!doctype html>
+<!--
+  Bumblewick-Privacy — custom 404 for the privacy-policy project site.
+
+  GitHub Pages serves this for any unmatched path under /Bumblewick-Privacy/ instead
+  of GitHub's generic 404. Parchment styling matches index.html (the privacy policy).
+  Links are root-relative so they resolve from any path. Self-contained: no external
+  fonts/scripts/trackers. Source of truth: site/404.html in the game repo.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, follow" />
+    <title>Page not found — Bumblewick</title>
+    <style>
+      :root {
+        --ink: #3b2a16;
+        --ink-soft: #5a4630;
+        --parch: #f6ecd4;
+        --parch-card: #fffaf0;
+        --frame: #9a6a32;
+        --frame-dark: #6e4a22;
+        --accent: #b4791f;
+        --rule: #e0cfa6;
+      }
+      * { box-sizing: border-box; }
+      html { -webkit-text-size-adjust: 100%; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 32px 16px;
+        background: var(--parch);
+        color: var(--ink);
+        font-family: Georgia, "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+        font-size: 17px;
+        line-height: 1.6;
+      }
+      .wrap {
+        width: 100%;
+        max-width: 560px;
+        text-align: center;
+        background: var(--parch-card);
+        border: 3px solid var(--frame);
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(60, 40, 10, 0.18);
+        padding: 40px clamp(20px, 5vw, 48px);
+      }
+      .code {
+        font-family: "Iowan Old Style", Georgia, serif;
+        font-size: clamp(52px, 16vw, 84px);
+        line-height: 1;
+        margin: 0;
+        color: var(--frame-dark);
+      }
+      h1 {
+        font-family: "Iowan Old Style", Georgia, serif;
+        font-size: clamp(22px, 5.5vw, 28px);
+        color: var(--accent);
+        margin: 8px 0 0;
+      }
+      p.lead { color: var(--ink-soft); margin: 14px 0 0; }
+      .cta {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 28px auto 0;
+        max-width: 360px;
+      }
+      .btn {
+        display: block;
+        padding: 12px 18px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 17px;
+        font-family: "Iowan Old Style", Georgia, serif;
+        border: 2px solid var(--frame);
+        color: var(--frame-dark);
+        background: #fbf3dd;
+        transition: background 0.15s ease, transform 0.05s ease;
+      }
+      .btn:hover { background: #f3e6c4; }
+      .btn:active { transform: translateY(1px); }
+      .btn.primary {
+        color: #fffaf0;
+        font-weight: 700;
+        border-color: var(--frame-dark);
+        background: linear-gradient(180deg, #c8932f 0%, #b4791f 60%, #9a6a32 100%);
+      }
+      .btn.primary:hover { filter: brightness(1.04); }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <p class="code">404</p>
+      <h1>This page wandered off</h1>
+      <p class="lead">
+        The page you&rsquo;re looking for isn&rsquo;t here &mdash; but the privacy
+        policy and the rest of the show are just a tap away.
+      </p>
+
+      <nav class="cta">
+        <a class="btn primary" href="/Bumblewick-Privacy/">Privacy Policy</a>
+        <a class="btn" href="/">Bumblewick home</a>
+      </nav>
+    </main>
+  </body>
+</html>
